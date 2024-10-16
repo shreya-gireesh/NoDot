@@ -1,0 +1,598 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>NoDot - We wash, you relax</title>
+    <meta name="author" content="Laun">
+    <meta name="description" content="NoDot - We wash, you relax">
+    <meta name="keywords" content="NoDot - We wash, you relax">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link rel="icon" type="image/png" sizes="62x62" href="{% static 'img/favicons/favicon.png' %}">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="stylesheet" href="{% static 'fonts/css2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="preloader"><button class="th-btn style2 preloaderCls">Cancel Preloader</button>
+        <div class="preloader-inner">
+            <div class="loader">
+                <div class="rot"></div><img src="{% static 'img/logo.png' %}" alt="NoDot">
+            </div>
+        </div>
+    </div>
+
+    <div class="th-menu-wrapper">
+        <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+            <div class="mobile-logo"><a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="No Dot"></a>
+            </div>
+            <div class="th-mobile-menu">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a>
+                                    
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                
+                    <li><a href="service.html">Services</a>
+                    </li>
+                    <li><a href="#">careers</a>
+                    </li>
+                    <li><a href="blog.html">Blogs</a>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <header class="th-header header-layout2">
+        <div class="header-top">
+            <div class="container">
+                <div class="row justify-content-center justify-content-xl-between align-items-center gy-2">
+                    <div class="col-auto d-none d-lg-block">
+                        <p class="header-notice text-theme">Welcome to NoDot</p>
+                    </div>
+                    <div class="col-auto">
+                        <div class="header-links">
+                            <ul>
+                                <li class="d-none d-md-inline-block"><i class="fa-solid fa-clock"></i>Opening Hours:
+                                    <span>Monday to Saturday(9:00 AM - 8:00 PM)</span></li>
+                                <li>
+                                    <div class="social-links"><span class="social-title">Follow Us On:</span> <a
+                                            href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a> <a
+                                            href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a> <a
+                                            href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a> <a
+                                            href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a> <a
+                                            href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sticky-wrapper">
+            <div class="menu-area">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <div class="header-logo"><a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}"
+                                        alt="No Dot"></a></div>
+                        </div>
+                        <div class="col-auto ms-xl-auto">
+                            <nav class="main-menu d-none d-lg-inline-block">
+                                <ul>
+                                    <li><a href="{% url 'home' %}">Home</a>
+                                    
+                                    </li>
+                                    <li><a href="about.html">About Us</a></li>
+                                
+                                    <li><a href="service.html">Services</a>
+                                    </li>
+                                    <li><a href="#">careers</a>
+                                    </li>
+                                    <li><a href="blog.html">Blogs</a>
+                                    </li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-auto">
+                            <div class="header-button">
+                                <!-- <button type="button" class="simple-icon searchBoxToggler">
+                                    <i class="far fa-search"></i>
+                                </button>  -->
+                                <!-- <button type="button" class="simple-icon sideMenuToggler2">
+                                    <span class="badge">5</span>
+                                     <i class="fa-regular fa-cart-shopping"></i>
+                                    </button> -->
+                                    <a href="shedule-pickup.html" class="icon_pickup d-block d-lg-none">
+                                        <i class="fa-regular fa-truck"></i>
+                                    </a>
+                                    <button type="button" class="th-menu-toggle d-block d-lg-none">
+                                        <i class="far fa-bars"></i>
+                                    </button> 
+                                    <a href="{% url 'schedule_pickup' %}" class="th-btn th-radius">Schedule A Pickup</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="th-hero-wrapper hero-2" id="hero">
+        <div class="swiper hero-slider2" id="heroSlider2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="hero-inner">
+                        <div class="th-hero-bg" data-bg-src="{% static 'img/hero/hero_2_1.jpg' %}"><img
+                                src="{% static 'img/hero/hero_overlay_2.png' %}" alt="Hero Image"></div>
+                        <div class="container">
+                            <div class="hero-style2"><span class="sub-title" data-ani="slideindown"
+                                    data-ani-delay="0.4s">Welcome to Nodot</span>
+                                <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.5s">Your Garments Our
+                                    Craftsmanship <span class="text-theme">.</span></h1>
+                                <p class="hero-text" data-ani="slideindown" data-ani-delay="0.7s">The frequency of dry
+                                    cleaning depends on factors such type of garment</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.9s"><a href="{% url 'schedule_pickup' %}"
+                                        class="th-btn style2">Shedule Pickup</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-inner">
+                        <div class="th-hero-bg" data-bg-src="{% static 'img/hero/hero_2_2.jpg' %}"><img
+                                src="{% static 'img/hero/hero_overlay_2.png' %}" alt="Hero Image"></div>
+                        <div class="container">
+                            <div class="hero-style2"><span class="sub-title" data-ani="slideindown"
+                                    data-ani-delay="0.4s">We Wash, You Relax</span>
+                                <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.5s">Cleaning Clothes
+                                    Sparkling Smiles <span class="text-theme">.</span></h1>
+                                <p class="hero-text" data-ani="slideindown" data-ani-delay="0.7s">We use high-quality,
+                                    eco-friendly detergents that are gentle on your clothes.</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.9s"><a href="{% url 'schedule_pickup' %}"
+                                        class="th-btn style2">Shedule Pickup</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-inner">
+                        <div class="th-hero-bg" data-bg-src="{% static 'img/hero/hero_2_3.jpg' %}"><img
+                                src="{% static 'img/hero/hero_overlay_2.png' %}" alt="Hero Image"></div>
+                        <div class="container">
+                            <div class="hero-style2"><span class="sub-title" data-ani="slideindown"
+                                    data-ani-delay="0.4s">We Clean, You Shine</span>
+                                <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.5s">Quality Laundry
+                                    Every Thread <span class="text-theme">.</span></h1>
+                                <p class="hero-text" data-ani="slideindown" data-ani-delay="0.7s">It seems like "Quality
+                                    Laundry Every Thread" might be a tagline or slogan.</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.9s"><a href="{% url 'schedule_pickup' %}"
+                                        class="th-btn style2">Shedule Pickup</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper thumbsSlider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="{% static 'img/hero/hero_2_1.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img src="{% static 'img/hero/hero_2_2.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img src="{% static 'img/hero/hero_2_3.jpg' %}" alt=""></div>
+            </div>
+        </div>
+        <div class="hero-animated-bubble"><img src="{% static 'img/shape/bubble_1.png' %}" alt="Laun"> <img
+                src="{% static 'img/shape/bubble_2.png' %}" alt="Laun"> <img src="{% static 'img/shape/bubble_3.png' %}" alt="Laun">
+            <img src="{% static 'img/shape/bubble_4.png' %}" alt="Laun"> <img src="{% static 'img/shape/bubble_5.png' %}" alt="Laun">
+            <img src="{% static 'img/shape/bubble_6.png' %}" alt="Laun"> <img src="{% static 'img/shape/bubble_7.png' %}" alt="Laun">
+            <img src="{% static 'img/shape/bubble_8.png' %}" alt="Laun"></div>
+    </div>
+   
+   <section>
+    <ul class="nav product-tab-style1" id="productTab" role="tablist">
+        <li class="nav-item" role="presentation"><a class="nav-link th-btn active" id="description-tab"
+                data-bs-toggle="tab" href="#description" role="tab" aria-controls="description"
+                aria-selected="true">LAUNDRY</a></li>
+        <li class="nav-item" role="presentation"><a class="nav-link th-btn" id="reviews-tab"
+                data-bs-toggle="tab" href="#reviews" role="tab" aria-controls="reviews"
+                aria-selected="false">DRY CLEANING</a></li>
+    </ul>
+
+    <div class="tab-content" id="productTabContent">
+        <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+            <div class="container">
+            <div class="title-area text-center">
+                <h2 class="sec-title">DRY CLEANING</h2>
+            </div>
+            <div class="row g-1 justify-content-center">
+                <div class="col-xl-4 col-md-4 col-4">
+                    <div class="price-box">
+                        <div class="price-box_icon"><img src="{% static 'img/icon/price_1_1.svg' %}" alt="Icon"></div>
+                        <h3 class="box-title">DRY CLEANING</h3>
+                        <h6 class="price-box_text">60 Cloth Per Month</h6>
+                        <div class="price-box_content">
+                            <h4 class="price-box_price"><span class="currency">₹</span>100. 00</h4>
+                            <div class="available-list">
+                                <ul>
+                                    <li>MEN’S WEAR</li>
+                                    <li>WOMEN’S WEAR</li>
+                                    <li>HOME LINEN</li>
+                                    <li>ACCESSORIES</li>
+                                    <li>KID’S WEAR</li>
+                                    
+                                </ul>
+                            </div><a href="shedule-pickup.html" class="th-btn btn-fw th-radius">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+            <div class="container">
+            <div class="title-area text-center">
+                <h2 class="sec-title">LAUNDRY</h2>
+            </div>
+            <div class="row g-1 justify-content-center">
+                <div class="col-xl-4 col-md-4 col-4">
+                    <div class="price-box">
+                        <div class="price-box_icon"><img src="{% static 'img/icon/price_1_1.svg' %}" alt="Icon"></div>
+                        <h3 class="box-title">ECONOMY</h3>
+                        <h6 class="price-box_text">60 Cloth Per Month</h6>
+                        <div class="price-box_content">
+                            <h4 class="price-box_price"><span class="currency">₹</span>60. 00</h4>
+                            <div class="available-list">
+                                <ul>
+                                    <li>4 T-Shirts</li>
+                                    <li>1 Pairs of Jeans</li>
+                                    <li>3 Button-Down Shirts</li>
+                                    <li>1 Pair of Shorts</li>
+                                    <li>7 Pairs of Underwear</li>
+                                    <li>6 Pairs of Socks</li>
+                                    <li>1 Towel</li>
+                                </ul>
+                            </div><a href="shedule-pickup.html" class="th-btn btn-fw th-radius">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 col-4">
+                    <div class="price-box">
+                        <div class="price-box_icon"><img src="{% static 'img/icon/price_1_2.svg' %}" alt="Icon"></div>
+                        <h3 class="box-title">PREMIUM</h3>
+                        <h6 class="price-box_text">50 Cloth Per Month</h6>
+                        <div class="price-box_content">
+                            <h4 class="price-box_price"><span class="currency">₹</span>90.00</h4>
+                            <div class="available-list">
+                                <ul>
+                                    <li>4 T-Shirts</li>
+                                    <li>2 Pairs of Jeans</li>
+                                    <li>3 Button-Down Shirts</li>
+                                    <li>5 Pair of Shorts</li>
+                                    <li>7 Pairs of Underwear</li>
+                                    <li>6 Pairs of Socks</li>
+                                    <li>6 Towel</li>
+                                </ul>
+                            </div><a href="shedule-pickup.html" class="th-btn btn-fw th-radius">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 col-4">
+                    <div class="price-box">
+                        <div class="price-box_icon"><img src="{% static 'img/icon/price_1_3.svg' %}" alt="Icon"></div>
+                        <h3 class="box-title">LUXURY</h3>
+                        <h6 class="price-box_text">80 Cloth Per Month</h6>
+                        <div class="price-box_content">
+                            <h4 class="price-box_price"><span class="currency">₹</span>120.00</h4>
+                            <div class="available-list">
+                                <ul>
+                                    <li>4 T-Shirts</li>
+                                    <li>3 Pairs of Jeans</li>
+                                    <li>3 Button-Down Shirts</li>
+                                    <li>6 Pair of Shorts</li>
+                                    <li>7 Pairs of Underwear</li>
+                                    <li>6 Pairs of Socks</li>
+                                    <li>3 Towel</li>
+                                </ul>
+                            </div><a href="shedule-pickup.html" class="th-btn btn-fw th-radius">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+   </section>
+   
+<section class="overflow-hidden space-top space-bottom" id="process-sec">
+    <div class="container">
+        <div class="title-area text-center"><span class="sub-title">Work Process</span>
+            <h2 class="sec-title">How We Work It!</h2>
+        </div>
+        <div class="row gy-4 justify-content-center">
+            <div class="col-xl-3 col-md-6 process-box-wrap">
+                <div class="process-box">
+                    <div class="box-icon"><img src="{% static 'img/icon/process_box_1.svg' %}" alt="icon">
+                        <div class="icon-shape"></div>
+                    </div>
+                    <p class="box-number">01</p>
+                    <h3 class="box-title">Call us And Book a Term</h3>
+                    <p class="box-text">Call us today and book your term for hassle-free service!
+                    </p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 process-box-wrap">
+                <div class="process-box">
+                    <div class="box-icon"><img src="{% static 'img/icon/process_box_2.svg' %}" alt="icon">
+                        <div class="icon-shape"></div>
+                    </div>
+                    <p class="box-number">02</p>
+                    <h3 class="box-title">We Collect</h3>
+                    <p class="box-text">We Collect – Convenient, efficient pickup for all your laundry needs
+                    </p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 process-box-wrap">
+                <div class="process-box">
+                    <div class="box-icon"><img src="{% static 'img/icon/process_box_3.svg' %}" alt="icon">
+                        <div class="icon-shape"></div>
+                    </div>
+                    <p class="box-number">03</p>
+                    <h3 class="box-title">We Clean</h3>
+                    <p class="box-text">Your Trusted Partner for Immaculate Spaces and Fresh Environments
+                    </p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 process-box-wrap">
+                <div class="process-box">
+                    <div class="box-icon"><img src="{% static 'img/icon/process_box_4.svg' %}" alt="icon">
+                        <div class="icon-shape"></div>
+                    </div>
+                    <p class="box-number">04</p>
+                    <h3 class="box-title">We Deliver</h3>
+                    <p class="box-text">We Deliver Quality and Care Straight to Your Doorstep!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="bg-top-center overflow-hidden space mb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="title-area text-center"><span class="sub-title">Our Best Services</span>
+                        <h2 class="sec-title">Because Your Clothes Deserve the Best</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-area">
+                <div class="swiper th-slider has-shadow" id="serviceSlider1"
+                    data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="service-item">
+                                <div class="service-item_wrapper">
+                                    <div class="service-item_img"><img src="{% static 'img/service/service_box_1.jpg' %}"
+                                            alt="img"></div>
+                                    <div class="service-item_icon"><img src="{% static 'img/icon/service_2_1.svg' %}"
+                                            alt="Icon"></div>
+                                </div>
+                                <div class="service-item_content" data-bg-src="{% static 'img/shape/service_shape_2.png' %}">
+                                    <h3 class="box-title"><a href="service-details.html">Garments Transformed</a></h3>
+                                    <p class="service-item_text">Dry cleaning uses a chemical solvent man in instead of
+                                        man water to clean clothes.</p><a href="service-details.html"
+                                        class="th-btn border">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="service-item">
+                                <div class="service-item_wrapper">
+                                    <div class="service-item_img"><img src="{% static 'img/service/service_box_2.jpg' %}"
+                                            alt="img"></div>
+                                    <div class="service-item_icon"><img src="{% static 'img/icon/service_2_2.svg' %}"
+                                            alt="Icon"></div>
+                                </div>
+                                <div class="service-item_content" data-bg-src="{% static 'img/shape/service_shape_2.png' %}">
+                                    <h3 class="box-title"><a href="service-details.html">Household Textile Care</a></h3>
+                                    <p class="service-item_text">The frequency of dry cleaning depends on factors like
+                                        the type of garment man</p><a href="service-details.html"
+                                        class="th-btn border">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="service-item">
+                                <div class="service-item_wrapper">
+                                    <div class="service-item_img"><img src="{% static 'img/service/service_box_3.jpg' %}"
+                                            alt="img"></div>
+                                    <div class="service-item_icon"><img src="{% static 'img/icon/service_2_3.svg' %}"
+                                            alt="Icon"></div>
+                                </div>
+                                <div class="service-item_content" data-bg-src="{% static 'img/shape/service_shape_2.png' %}">
+                                    <h3 class="box-title"><a href="service-details.html">Leather & Suede Care</a></h3>
+                                    <p class="service-item_text">While many fabrics can dry cleaned some extremely
+                                        delicate or heavily embellished</p><a href="service-details.html"
+                                        class="th-btn border">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="service-item">
+                                <div class="service-item_wrapper">
+                                    <div class="service-item_img"><img src="{% static 'img/service/service_box_4.jpg' %}"
+                                            alt="img"></div>
+                                    <div class="service-item_icon"><img src="{% static 'img/icon/service_2_1.svg' %}"
+                                            alt="Icon"></div>
+                                </div>
+                                <div class="service-item_content" data-bg-src="{% static 'img/shape/service_shape_2.png' %}">
+                                    <h3 class="box-title"><a href="service-details.html">Dry Cleaning</a></h3>
+                                    <p class="service-item_text">Dry cleaning is a method of cleaning clothing and
+                                        textiles that uses a solvent.</p><a href="service-details.html"
+                                        class="th-btn border">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="service-item">
+                                <div class="service-item_wrapper">
+                                    <div class="service-item_img"><img src="{% static 'img/service/service_box_5.jpg' %}"
+                                            alt="img"></div>
+                                    <div class="service-item_icon"><img src="{% static 'img/icon/service_2_2.svg' %}"
+                                            alt="Icon"></div>
+                                </div>
+                                <div class="service-item_content" data-bg-src="{% static 'img/shape/service_shape_2.png' %}">
+                                    <h3 class="box-title"><a href="service-details.html">Wash & Fold</a></h3>
+                                    <p class="service-item_text">Wash and fold (also known as drop-off laundry or fluff
+                                        and fold a laundry service.</p><a href="service-details.html"
+                                        class="th-btn border">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="service-item">
+                                <div class="service-item_wrapper">
+                                    <div class="service-item_img"><img src="{% static 'img/service/service_box_1.jpg' %}"
+                                            alt="img"></div>
+                                    <div class="service-item_icon"><img src="{% static 'img/icon/service_2_3.svg' %}"
+                                            alt="Icon"></div>
+                                </div>
+                                <div class="service-item_content" data-bg-src="{% static 'img/shape/service_shape_2.png' %}">
+                                    <h3 class="box-title"><a href="service-details.html">Ironing/Pressing</a></h3>
+                                    <p class="service-item_text">Ironing or pressing is the process of using a heated
+                                        iron or press to out wrinkles</p><a href="service-details.html"
+                                        class="th-btn border">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><button data-slider-prev="#serviceSlider1" class="slider-arrow slider-prev"><i
+                        class="far fa-arrow-left"></i></button> <button data-slider-next="#serviceSlider1"
+                    class="slider-arrow slider-next"><i class="far fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+ 
+    <footer class="footer-wrapper footer-layout2" data-bg-src="{% static 'img/bg/footer_bg_2.jpg' %}">
+        <div class="widget-area">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-xl-3">
+                        <div class="widget footer-widget">
+                            <div class="th-widget-about">
+                                <div class="about-logo"><a href="home-laundry-service.html"><img
+                                            src="{% static 'img/logo.png' %}" alt="Laun"></a></div>
+                                <p class="about-text">Begin by scheduling your laundry man service. You can choose from
+                                    our is convenient options Any visible stains</p>
+                                <div class="th-social"><a href="https://www.facebook.com/"><i
+                                            class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i
+                                            class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
+                                            class="fab fa-linkedin-in"></i></a> <a href="https://www.whatsapp.com/"><i
+                                            class="fab fa-whatsapp"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget widget_nav_menu footer-widget">
+                            <h3 class="widget_title">Quick Links</h3>
+                            <div class="menu-all-pages-container">
+                                <ul class="menu">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                    <li><a href="#">Blogs</a></li>
+                                    <li><a href="#">Contacts</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget footer-widget">
+                            <h3 class="widget_title">Recent Posts</h3>
+                            <div class="recent-post-wrap">
+                                <div class="recent-post">
+                                    <div class="media-img"><a href="blog-details.html"><img
+                                                src="{% static 'img/blog/recent-post-1-1.jpg' %}" alt="Blog Image"></a></div>
+                                    <div class="media-body">
+                                        <div class="recent-post-meta"><a href="blog.html"><i
+                                                    class="far fa-calendar"></i>21 October , 2023</a></div>
+                                        <h4 class="post-title"><a class="text-inherit" href="blog-details.html">A Fresh
+                                                Start for Your Wardrobe</a></h4>
+                                    </div>
+                                </div>
+                                <div class="recent-post">
+                                    <div class="media-img"><a href="blog-details.html"><img
+                                                src="{% static 'img/blog/recent-post-1-2.jpg' %}" alt="Blog Image"></a></div>
+                                    <div class="media-body">
+                                        <div class="recent-post-meta"><a href="blog.html"><i
+                                                    class="far fa-calendar"></i>22 October , 2023</a></div>
+                                        <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Where
+                                                Clean Meets Convenience</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget footer-widget">
+                            <h3 class="widget_title">Opening Our</h3>
+                            <div class="th-widget-schedule">
+                                <p class="schedule-info"><span>Mon - Tuesday</span><span>8:00 AM - 6:00 PM</span></p>
+                                <p class="schedule-info"><span>Wed:</span><span>9:00 AM - 5:00 PM</span></p>
+                                <p class="schedule-info"><span>Fri - Sat:</span><span>9:00 AM - 6:00 PM</span></p>
+                                <p class="schedule-info"><span>Sunday</span><span>Closed</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap">
+            <div class="container">
+                <div class="row gy-2 align-items-center">
+                    <div class="col-lg-6">
+                        <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2024 <a
+                                href="#">NoDot</a>. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-lg-6 text-center text-md-end">
+                        <div class="footer-links">
+                            <ul>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms &amp; Condition</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="scroll-top"><svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+            </path>
+        </svg></div>
+    <script src="{% static 'js/vendor/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/nice-select.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
