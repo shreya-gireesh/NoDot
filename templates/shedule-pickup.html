@@ -259,8 +259,8 @@
                 <div class="col-md-6 col-xl-3">
                     <div class="widget footer-widget">
                         <div class="th-widget-about">
-                            <div class="about-logo"><a href="home-laundry-services.html"><img
-                                        src="{% static 'img/logo.png' %}" alt="Laun"></a></div>
+                            <div class="about-logo"><a href="{% url 'home' %}"><img
+                                        src="{% static 'img/logo.png' %}" alt="No Dot"></a></div>
                             <p class="about-text">Begin by scheduling your laundry man service. You can choose from
                                 our is convenient options Any visible stains</p>
                             <div class="th-social"><a href="https://www.facebook.com/"><i
@@ -276,11 +276,11 @@
                         <h3 class="widget_title">Quick Links</h3>
                         <div class="menu-all-pages-container">
                             <ul class="menu">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Blogs</a></li>
-                                <li><a href="#">Contacts</a></li>
+                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                <li><a href="{% url 'services' %}">Services</a></li>
+                                <li><a href="{% url 'careers' %}">Careers</a></li>
+                                <li><a href="{% url 'blogs' %}">Blogs</a></li>
+                                <li><a href="{% url 'contact' %}">Contacts</a></li>
                             </ul>
                         </div>
                     </div>

@@ -42,15 +42,15 @@
                     <li><a href="{% url 'home' %}">Home</a>
                                     
                     </li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
                 
-                    <li><a href="service.html">Services</a>
+                    <li><a href="{% url 'services' %}">Services</a>
                     </li>
-                    <li><a href="#">careers</a>
+                    <li><a href="{% url 'careers' %}">careers</a>
                     </li>
-                    <li><a href="blog.html">Blogs</a>
+                    <li><a href="{% url 'blogs' %}">Blogs</a>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -95,15 +95,15 @@
                                     <li><a href="{% url 'home' %}">Home</a>
                                     
                                     </li>
-                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="{% url 'about' %}">About Us</a></li>
                                 
-                                    <li><a href="service.html">Services</a>
+                                    <li><a href="{% url 'services' %}">Services</a>
                                     </li>
-                                    <li><a href="#">careers</a>
+                                    <li><a href="{% url 'careers' %}">careers</a>
                                     </li>
-                                    <li><a href="blog.html">Blogs</a>
+                                    <li><a href="{% url 'blogs' %}">Blogs</a>
                                     </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -116,12 +116,13 @@
                                     <span class="badge">5</span>
                                      <i class="fa-regular fa-cart-shopping"></i>
                                     </button> -->
-                                    <a href="shedule-pickup.html" class="icon_pickup d-block d-lg-none">
+                                    <a href="{% url 'schedule_pickup' %}" class="icon_pickup d-block d-lg-none">
                                         <i class="fa-regular fa-truck"></i>
                                     </a>
                                     <button type="button" class="th-menu-toggle d-block d-lg-none">
                                         <i class="far fa-bars"></i>
-                                    </button> 
+                                    </button>
+                                    <a href="{% url 'login' %}" class="th-btn th-radius btn-secondary">Login</a>
                                     <a href="{% url 'schedule_pickup' %}" class="th-btn th-radius">Schedule A Pickup</a>
                             </div>
                         </div>
@@ -493,8 +494,8 @@
                     <div class="col-md-6 col-xl-3">
                         <div class="widget footer-widget">
                             <div class="th-widget-about">
-                                <div class="about-logo"><a href="home-laundry-service.html"><img
-                                            src="{% static 'img/logo.png' %}" alt="Laun"></a></div>
+                                <div class="about-logo"><a href="{% url 'home' %}"><img
+                                            src="{% static 'img/logo.png' %}" alt="No Dot"></a></div>
                                 <p class="about-text">Begin by scheduling your laundry man service. You can choose from
                                     our is convenient options Any visible stains</p>
                                 <div class="th-social"><a href="https://www.facebook.com/"><i
@@ -510,11 +511,11 @@
                             <h3 class="widget_title">Quick Links</h3>
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">Careers</a></li>
-                                    <li><a href="#">Blogs</a></li>
-                                    <li><a href="#">Contacts</a></li>
+                                    <li><a href="{% url 'about' %}">About Us</a></li>
+                                    <li><a href="{% url 'services' %}">Services</a></li>
+                                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                                    <li><a href="{% url 'blogs' %}">Blogs</a></li>
+                                    <li><a href="{% url 'contact' %}">Contacts</a></li>
                                 </ul>
                             </div>
                         </div>
