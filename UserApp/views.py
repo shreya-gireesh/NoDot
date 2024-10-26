@@ -54,7 +54,7 @@ def login(request):
         try:
             admin = AdminModel.objects.get(admin_mail=identifier, admin_password=password)
             request.session['user'] = admin.admin_id
-            request.session.set_expiry(90)
+            request.session.set_expiry(3600)
             return redirect('dashboard')
         except AdminModel.DoesNotExist:
             error = "User doesnt exist"
@@ -141,6 +141,23 @@ def delete_service(request, service_id):
         return redirect('addservice')  # Adjust the redirect based on your URL name for the user list page
     return redirect('addservice')
 
+def edit_service(request, service_id):
+    service = get_object_or_404(ServiceModel, pk = service_id)
+    if request.method == 'POST':
+        service.service_name = request.POST.get('service_name', service.service_name)
+        service.description = request.POST.get('description', service.description)
+
+        # Handle image upload if a new file is provided
+        if request.FILES.get('image'):
+            service.images = request.FILES['image']  # Assuming 'images' is the field for the image
+
+        service.save()
+        return redirect('addservice')  # Adjust this to your service list view
+
+
+    return render(request, 'edit-service.html', {'service': service})
+
+
 def jobpost(request):
     user = request.session.get('user', None)
     if user is None:
@@ -188,3 +205,52 @@ def job(request, job_id):
     admin_name = admin.admin_name
     job_post = JobPostModel.objects.get(job_id=job_id)
     return render(request, 'job.html', {'job_post': job_post, 'username': admin_name})
+
+def applications(request):
+    user = request.session.get('user', None)
+    if user is None:
+        return redirect('/login')
+
+    admin = AdminModel.objects.get(admin_id=user)
+
+    admin_name = admin.admin_name
+    applications = JobApplyModel.objects.all()
+    return render(request, 'applications.html', {'applications': applications})
+
+def alljobs(request):
+    user = request.session.get('user', None)
+    if user is None:
+        return redirect('/login')
+
+    admin = AdminModel.objects.get(admin_id=user)
+
+    admin_name = admin.admin_name
+    jobs = JobPostModel.objects.all()
+    return render(request, 'alljobs.html', {'jobs': jobs})
+
+def delete_job(request, jobid):
+    job = get_object_or_404(JobPostModel, job_id=jobid)
+    if request.method == 'POST':
+        job.delete()
+        return redirect('alljobs')  # Adjust the redirect based on your URL name for the user list page
+    return redirect('alljobs')
+
+def edit_job(request, jobid):
+    job = get_object_or_404(JobPostModel, job_id=jobid)
+    if request.method == 'POST':
+        if request.method == 'POST':
+            # Get data from the request
+            job.title = request.POST.get('title', job.title)
+            job.description = request.POST.get('description', job.description)
+            job.responsibilities = request.POST.get('responsibilities', job.responsibilities)
+            job.requirements = request.POST.get('requirements', job.requirements)
+            job.desirable_skills = request.POST.get('desirable_skills', job.desirable_skills)
+            job.education = request.POST.get('education', job.education)
+            job.job_type = request.POST.get('job_type', job.job_type)
+            job.location = request.POST.get('location', job.location)
+            job.experience_required = request.POST.get('experience_required', job.experience_required)
+
+            # Save the updated job instance
+            job.save()
+        return redirect('alljobs')
+    return render(request, 'edit-job.html',{'job': job})

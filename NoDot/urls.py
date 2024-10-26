@@ -36,8 +36,12 @@ urlpatterns = [
     path('dashboard', views.dashboard, name='dashboard'),
     path('addservice', views.addservice, name='addservice'),
     path('delete_service/<int:service_id>', views.delete_service, name='delete_service'),
+    path('edit_service/<int:service_id>', views.edit_service, name='edit_service'),
     path('jobpost', views.jobpost, name='jobpost'),
-    # path('job/<int:job_id>/', views.job, name='jobdetails'),
+    path('applications', views.applications, name='applications'),
+    path('alljobs', views.alljobs, name='alljobs'),
+    path('delete_job/<int:jobid>', views.delete_job, name='delete_job'),
+    path('edit_job/<int:jobid>', views.edit_job, name='edit_job'),
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
